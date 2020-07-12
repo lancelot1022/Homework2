@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Login Page Test Suite" parallel="methods" thread-count="1">
+ 
+    <test name="Acceptance Test - Login" preserve-order="true">
+ 
+		<classes>
+ 
+		    <class name="TestLoginPage.TestLogin">
+		    	<methods>
+		    		<include name="TC001_VerifyUnregisteredEmail" />
+		    		<include name="TC002_VerifyNoCountryCodePhoneNo" />
+		    		<include name="TC003_VerifyNoPrefixPhoneNo" />
+		    		<include name="TC004_VerifyValidEmailAndAuthPage" />
+		    		<include name="TC005_VerifyValidPhoneWithWrongPassword" />
+		    		<include name="TC006_VerifyEmailWithCorrectPassword" />
+		    		<include name="TC007_VerifyMobileAppCodeCancelAndRepeat" />
+		    		<include name="TC008_VerifyMobileAppCodeExpiredAndRepeat" />
+		    	</methods>
+			</class>
+		</classes>
+ 
+    </test>
+ 
+</suite>
